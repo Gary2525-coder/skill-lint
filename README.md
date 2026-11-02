@@ -1,5 +1,10 @@
 # skill-lint
 
+[![ci](https://github.com/Gary2525-coder/skill-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/Gary2525-coder/skill-lint/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![python: 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](scripts/skilllint.py)
+[![dependencies: none](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](scripts/skilllint.py)
+
 **Build Agent Skills that actually fire — then score them before you ship.**
 
 Most skills are never loaded. Not because they're bad, but because the agent has
