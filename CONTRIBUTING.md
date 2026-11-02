@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 2d199c0a34e4d65bd15eb413952e1e31_31d32c83d64711f1a97752540064ee0f
-    ReservedCode1: +vFR1q75xKoxqwzOyIrM3tVFKem3m1OQz1RSRYeXjMCyh/vgki635CWZWBzVZKp9X3JDB3AqZX9cs129pqDcDDYlfHa4erY56dGEmZBxTDq4RtAe+7L6GB0ofbH8hnTleSyNPR9iCHKVryFLt8ewD1EqYqOEASRu9bOvyUizhNs2ACZqCa0+4Gmn/ik=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 2d199c0a34e4d65bd15eb413952e1e31_31d32c83d64711f1a97752540064ee0f
-    ReservedCode2: +vFR1q75xKoxqwzOyIrM3tVFKem3m1OQz1RSRYeXjMCyh/vgki635CWZWBzVZKp9X3JDB3AqZX9cs129pqDcDDYlfHa4erY56dGEmZBxTDq4RtAe+7L6GB0ofbH8hnTleSyNPR9iCHKVryFLt8ewD1EqYqOEASRu9bOvyUizhNs2ACZqCa0+4Gmn/ik=
----
-
 # Contributing
 
 The bar for a new check is simple: it must catch a failure that has actually
