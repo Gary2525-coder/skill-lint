@@ -14,11 +14,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Score skill-forge itself
-        run: python scripts/skillforge.py score . --min-score 85
+      - name: Score skill-lint itself
+        run: python scripts/skilllint.py score . --min-score 85
 
       - name: Score the bundled example
-        run: python scripts/skillforge.py score examples/photos-by-date --min-score 85
+        run: python scripts/skilllint.py score examples/photos-by-date --min-score 85
 
       - name: JSON output is valid
-        run: python scripts/skillforge.py score . --json | python -c "import json,sys; json.load(sys.stdin)"
+        run: python scripts/skilllint.py score . --json | python -c "import json,sys; json.load(sys.stdin)"
