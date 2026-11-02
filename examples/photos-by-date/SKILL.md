@@ -1,16 +1,8 @@
 ---
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 2d199c0a34e4d65bd15eb413952e1e31_324d964ed64711f19fe5525400638852
-    ReservedCode1: qJDtus5N4GhpLw1vPZXS4WVnfmHW/30TcXaPqhs4HR3Sl1iVRqg6qSlNSWQmNvsWxxPhoMOMnQNdAaPGEpNfeHrxc2ok3Hgkh2ylSOCFIKbUZGepR9A+fsPuFJ5/TWCPQkXzfwcq+VpVJ1iZMkdtw2mH4QGLSXtESLcBimpDovQT0gPzqG5zIbo0iSg=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 2d199c0a34e4d65bd15eb413952e1e31_324d964ed64711f19fe5525400638852
-    ReservedCode2: qJDtus5N4GhpLw1vPZXS4WVnfmHW/30TcXaPqhs4HR3Sl1iVRqg6qSlNSWQmNvsWxxPhoMOMnQNdAaPGEpNfeHrxc2ok3Hgkh2ylSOCFIKbUZGepR9A+fsPuFJ5/TWCPQkXzfwcq+VpVJ1iZMkdtw2mH4QGLSXtESLcBimpDovQT0gPzqG5zIbo0iSg=
+name: photos-by-date
+description: Renames and sorts photo files into YYYY/MM folders using EXIF capture date, falling back to file mtime when EXIF is absent. Use when the user asks to organise, rename, or sort photos by the date they were taken.
+license: MIT
 ---
-
-
-
 # photos-by-date
 
 ## When to use
