@@ -6,7 +6,7 @@ linter uninstalled.
 
 ## Add a check
 
-1. Pick the dimension it belongs to in `scripts/skillforge.py` (`Structure`,
+1. Pick the dimension it belongs to in `scripts/skilllint.py` (`Structure`,
    `Triggerability`, `Executability`, `Reliability`, `Discoverability`).
 2. Use the `add(level, code, dim, points, max_points, message, fix)` helper.
    Every warning needs a `fix` — a check without a suggested fix is a complaint,
@@ -30,8 +30,8 @@ lower on purpose — the scorer treats them as missing.
 ## Before you open a PR
 
 ```bash
-python scripts/skillforge.py score . --min-score 85
-python scripts/skillforge.py score examples/photos-by-date --min-score 85
+python scripts/skilllint.py score . --min-score 85
+python scripts/skilllint.py score examples/photos-by-date --min-score 85
 ```
 
 CI runs both. A red build means the change made the skill worse, not that the
