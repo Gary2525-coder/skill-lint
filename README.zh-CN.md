@@ -1,17 +1,17 @@
-# skill-forge
+# skill-lint
 
 **写 Agent Skill 的正确姿势：先让它能被触发，再谈好不好用。**
 
 大多数 skill 从来没被加载过。不是写得差，是模型根本不知道该在什么时候用它。
-`skill-forge` 给你两样东西：
+`skill-lint` 给你两样东西：
 
 1. 一个 skill：把一句话需求变成完整、可直接发布的 skill 目录。
 2. 一个 CLI：给任意 skill 打分，专治那个让 90% 的 skill 悄悄失效的 `description` 问题。
 
 ```console
-$ python scripts/skillforge.py score ./my-skill
+$ python scripts/skilllint.py score ./my-skill
 
-skill-forge  ·  ./my-skill
+skill-lint  ·  ./my-skill
 score 67/100   grade C
 
   Structure   25/25  ##########
@@ -35,8 +35,8 @@ blocked: fix errors before publishing.
 ## 安装
 
 ```bash
-git clone https://github.com/<your-name>/skill-forge.git
-mkdir -p ~/.claude/skills && cp -r skill-forge ~/.claude/skills/
+git clone https://github.com/<your-name>/skill-lint.git
+mkdir -p ~/.claude/skills && cp -r skill-lint ~/.claude/skills/
 ```
 
 兼容任何读取 `SKILL.md` 约定的客户端：Claude Code、Codex、Cursor。
@@ -53,10 +53,10 @@ mkdir -p ~/.claude/skills && cp -r skill-forge ~/.claude/skills/
 也可以直接用命令行：
 
 ```bash
-python scripts/skillforge.py new "convert pdf invoices to csv"   # 生成骨架
-python scripts/skillforge.py score ./pdf-invoices-to-csv         # 打分
-python scripts/skillforge.py score ./pdf-invoices-to-csv --json  # 机器可读
-python scripts/skillforge.py score ./my-skill --min-score 85     # CI 卡口，失败退出码 1
+python scripts/skilllint.py new "convert pdf invoices to csv"   # 生成骨架
+python scripts/skilllint.py score ./pdf-invoices-to-csv         # 打分
+python scripts/skilllint.py score ./pdf-invoices-to-csv --json  # 机器可读
+python scripts/skilllint.py score ./my-skill --min-score 85     # CI 卡口，失败退出码 1
 ```
 
 ## 五个评分维度
@@ -88,15 +88,15 @@ description: Converts PDF invoices into a CSV ledger with date, vendor, and tota
 ## 免安装检查
 
 ```bash
-curl -sO https://raw.githubusercontent.com/<your-name>/skill-forge/main/scripts/skillforge.py
-python skillforge.py score ./my-skill
+curl -sO https://raw.githubusercontent.com/<your-name>/skill-lint/main/scripts/skilllint.py
+python skilllint.py score ./my-skill
 ```
 
 ## CI 卡口
 
 ```yaml
 - uses: actions/checkout@v4
-- run: python scripts/skillforge.py score ./my-skill --min-score 85
+- run: python scripts/skilllint.py score ./my-skill --min-score 85
 ```
 
 以后谁把 description 改坏了，构建直接失败，而不是悄悄让 skill 失效。
@@ -105,7 +105,7 @@ python skillforge.py score ./my-skill
 
 CLI 只测机器那一半——路由、结构、契约。另一半是人在 GitHub 上滑过时，四秒内信不信你：
 一行说清价值、贴一段真实的终端输出、一个能复制的安装块、MIT 协议。
-`skill-forge` 只测最后两项，前两项得你自己写。
+`skill-lint` 只测最后两项，前两项得你自己写。
 
 ## 协议
 
