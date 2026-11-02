@@ -3,7 +3,7 @@
 Sorts photos into `YYYY/MM/` folders using EXIF capture date, falling back to
 file modification time. Stdlib only, no `pip install`, no API key.
 
-Built with [skill-forge](https://github.com/<your-name>/skill-forge) — scores 90+.
+Built with [skill-lint](https://github.com/<your-name>/skill-lint) — scores 90+.
 
 ## Install
 
