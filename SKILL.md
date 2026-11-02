@@ -1,16 +1,8 @@
 ---
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 2d199c0a34e4d65bd15eb413952e1e31_30441053d64711f19fe5525400638852
-    ReservedCode1: tEqMBHyCUR5CMt23EAzXxvyH4naF35SicXTKOmoyCX0r4f0Yk1NjCWEOTt8lnWDXWj16eX9rD7iPUZUZKMeZWSSJmt7HImVxfq3zwOFQE1gXguKUEWs90XMwdx9zJ5Y8ps/V56DtTZWS0sS/rZk4ZBwxmQpAUm0obsv1HI5e+OILPKybc7fF4gB2S+w=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 2d199c0a34e4d65bd15eb413952e1e31_30441053d64711f19fe5525400638852
-    ReservedCode2: tEqMBHyCUR5CMt23EAzXxvyH4naF35SicXTKOmoyCX0r4f0Yk1NjCWEOTt8lnWDXWj16eX9rD7iPUZUZKMeZWSSJmt7HImVxfq3zwOFQE1gXguKUEWs90XMwdx9zJ5Y8ps/V56DtTZWS0sS/rZk4ZBwxmQpAUm0obsv1HI5e+OILPKybc7fF4gB2S+w=
+name: skill-forge
+description: Builds, audits and scores portable Agent Skills (SKILL.md plus scripts) for Claude Code, Codex and Cursor. Use when the user asks to write a skill, convert a workflow into a reusable skill, fix a skill that never triggers, or review a SKILL.md before publishing.
+license: MIT
 ---
-
-
-
 # skill-forge
 
 Most skills fail for one boring reason: the agent never knows when to load them.
