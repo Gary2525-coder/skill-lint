@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 2d199c0a34e4d65bd15eb413952e1e31_31453484d64711f19fe5525400638852
-    ReservedCode1: HJZCnoRHyW/d391pKgBgAa/PWpUYdF70+Cle8l4mgSVa+b9A08f3Wd63yoq2slfEqSb0BEl4y+gyfh9PQnBOCZySBlvrQPR2RNtRPGkh/GnuDa/lgGZ0pm0spMn/k9+IiVdJVPYsL3JDPg73EmtrVIVKEth9iq7N2vFR4HXWJ08CqEHn+izsptW7Wi0=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 2d199c0a34e4d65bd15eb413952e1e31_31453484d64711f19fe5525400638852
-    ReservedCode2: HJZCnoRHyW/d391pKgBgAa/PWpUYdF70+Cle8l4mgSVa+b9A08f3Wd63yoq2slfEqSb0BEl4y+gyfh9PQnBOCZySBlvrQPR2RNtRPGkh/GnuDa/lgGZ0pm0spMn/k9+IiVdJVPYsL3JDPg73EmtrVIVKEth9iq7N2vFR4HXWJ08CqEHn+izsptW7Wi0=
----
-
 # skill-forge
 
 **写 Agent Skill 的正确姿势：先让它能被触发，再谈好不好用。**
@@ -46,7 +35,7 @@ blocked: fix errors before publishing.
 ## 安装
 
 ```bash
-git clone https://github.com/Gary2525-coder/skill-forge.git
+git clone https://github.com/<your-name>/skill-forge.git
 mkdir -p ~/.claude/skills && cp -r skill-forge ~/.claude/skills/
 ```
 
@@ -99,7 +88,7 @@ description: Converts PDF invoices into a CSV ledger with date, vendor, and tota
 ## 免安装检查
 
 ```bash
-curl -sO https://raw.githubusercontent.com/Gary2525-coder/skill-forge/main/scripts/skillforge.py
+curl -sO https://raw.githubusercontent.com/<your-name>/skill-forge/main/scripts/skillforge.py
 python skillforge.py score ./my-skill
 ```
 
