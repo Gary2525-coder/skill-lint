@@ -1,18 +1,18 @@
-# skill-forge
+# skill-lint
 
 **Build Agent Skills that actually fire — then score them before you ship.**
 
 Most skills are never loaded. Not because they're bad, but because the agent has
-no idea *when* to load them. `skill-forge` gives you two things:
+no idea *when* to load them. `skill-lint` gives you two things:
 
 1. A skill that turns a one-line requirement into a complete, publishable skill folder.
 2. A CLI that scores any skill on the five things that decide adoption — including
    the `description` trap that silently kills 90% of them.
 
 ```console
-$ python scripts/skillforge.py score ./my-skill
+$ python scripts/skilllint.py score ./my-skill
 
-skill-forge  ·  ./my-skill
+skill-lint  ·  ./my-skill
 score 67/100   grade C
 
   Structure   25/25  ##########
@@ -40,8 +40,8 @@ Fix those, run it again, ship. That's the whole loop.
 ## Install
 
 ```bash
-git clone https://github.com/<your-name>/skill-forge.git
-mkdir -p ~/.claude/skills && cp -r skill-forge ~/.claude/skills/
+git clone https://github.com/<your-name>/skill-lint.git
+mkdir -p ~/.claude/skills && cp -r skill-lint ~/.claude/skills/
 ```
 
 Works with Claude Code, Codex, Cursor, and anything else that reads the
@@ -61,10 +61,10 @@ the score and the highest-leverage fix left.
 Or do it from the shell:
 
 ```bash
-python scripts/skillforge.py new "convert pdf invoices to csv"   # scaffold
-python scripts/skillforge.py score ./pdf-invoices-to-csv         # audit
-python scripts/skillforge.py score ./pdf-invoices-to-csv --json  # machine-readable
-python scripts/skillforge.py score ./my-skill --min-score 85     # CI gate, exit 1 on fail
+python scripts/skilllint.py new "convert pdf invoices to csv"   # scaffold
+python scripts/skilllint.py score ./pdf-invoices-to-csv         # audit
+python scripts/skilllint.py score ./pdf-invoices-to-csv --json  # machine-readable
+python scripts/skilllint.py score ./my-skill --min-score 85     # CI gate, exit 1 on fail
 ```
 
 ## What it scores
@@ -97,15 +97,15 @@ and almost nobody does it.
 ## Zero-install check
 
 ```bash
-curl -sO https://raw.githubusercontent.com/<your-name>/skill-forge/main/scripts/skillforge.py
-python skillforge.py score ./my-skill
+curl -sO https://raw.githubusercontent.com/<your-name>/skill-lint/main/scripts/skilllint.py
+python skilllint.py score ./my-skill
 ```
 
 ## CI
 
 ```yaml
 - uses: actions/checkout@v4
-- run: python scripts/skillforge.py score ./my-skill --min-score 85
+- run: python scripts/skilllint.py score ./my-skill --min-score 85
 ```
 
 A PR that guts your description now fails the build instead of quietly making
@@ -115,7 +115,7 @@ the skill unreachable.
 
 The CLI grades the machine half — routing, structure, contract. The other half
 is whether a human scrolling GitHub believes it in four seconds: one-line pitch,
-a pasted terminal session, a copy-paste install block, MIT license. `skill-forge`
+a pasted terminal session, a copy-paste install block, MIT license. `skill-lint`
 scores the last two; write the first two yourself.
 
 ## License
