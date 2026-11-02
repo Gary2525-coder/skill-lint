@@ -1,9 +1,9 @@
 ---
-name: skill-forge
+name: skill-lint
 description: Builds, audits and scores portable Agent Skills (SKILL.md plus scripts) for Claude Code, Codex and Cursor. Use when the user asks to write a skill, convert a workflow into a reusable skill, fix a skill that never triggers, or review a SKILL.md before publishing.
 license: MIT
 ---
-# skill-forge
+# skill-lint
 
 Most skills fail for one boring reason: the agent never knows when to load them.
 This skill builds skills that fire, and scores them on the five dimensions that
@@ -64,8 +64,8 @@ it as if it were the only thing the model will ever read.
 5. **Score it, then fix the errors.**
 
    ```bash
-   python scripts/skillforge.py score <skill-dir>
-   python scripts/skillforge.py score <skill-dir> --json
+   python scripts/skilllint.py score <skill-dir>
+   python scripts/skilllint.py score <skill-dir> --json
    ```
 
    Loop until `errors == 0` and score >= 85. Do not hand-wave a 60.
@@ -91,7 +91,7 @@ Return exactly this, in this order:
 1. **Path** — absolute path of the generated skill directory.
 2. **Files** — each file created, one line each.
 3. **Description** — the frontmatter description, quoted verbatim.
-4. **Score** — the score line from `skillforge.py`, pasted, plus remaining warnings.
+4. **Score** — the score line from `skilllint.py`, pasted, plus remaining warnings.
 5. **Next step** — the single highest-leverage fix if the score is under 90.
 
 ## Guardrails
@@ -143,13 +143,13 @@ was added, reaching 92.
 ## Verification
 
 ```bash
-python scripts/skillforge.py score . --min-score 85
+python scripts/skilllint.py score . --min-score 85
 echo $?   # 0 = shippable
 ```
 
 Use it in CI so a PR that breaks the description cannot merge:
 
 ```yaml
-- run: python scripts/skillforge.py score ./my-skill --min-score 85
+- run: python scripts/skilllint.py score ./my-skill --min-score 85
 ```
 *（内容由AI生成，仅供参考）*
