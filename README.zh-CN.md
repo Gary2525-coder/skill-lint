@@ -1,5 +1,10 @@
 # skill-lint
 
+[![ci](https://github.com/Gary2525-coder/skill-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/Gary2525-coder/skill-lint/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![python: 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](scripts/skilllint.py)
+[![dependencies: none](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](scripts/skilllint.py)
+
 **写 Agent Skill 的正确姿势：先让它能被触发，再谈好不好用。**
 
 大多数 skill 从来没被加载过。不是写得差，是模型根本不知道该在什么时候用它。
