@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 2d199c0a34e4d65bd15eb413952e1e31_30cab73fd64711f1a97752540064ee0f
-    ReservedCode1: 3l5QCouNaB+fXx10K2hP+NRRCE+oSNevQ9FTRvneKAOUzqjB5eF5REiw23YlgHQquBO7SvDKoyzh5KW+gWOJKwNMo2d8mtHPRBViCs3BY/P9mdhS/2EWS3vvuK9AN+Z+OyZKI9bZPnC5z0u6mEMb5cdY6YHxb/fq/sgod1o4cdia/DNyjLBvDJeGazI=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 2d199c0a34e4d65bd15eb413952e1e31_30cab73fd64711f1a97752540064ee0f
-    ReservedCode2: 3l5QCouNaB+fXx10K2hP+NRRCE+oSNevQ9FTRvneKAOUzqjB5eF5REiw23YlgHQquBO7SvDKoyzh5KW+gWOJKwNMo2d8mtHPRBViCs3BY/P9mdhS/2EWS3vvuK9AN+Z+OyZKI9bZPnC5z0u6mEMb5cdY6YHxb/fq/sgod1o4cdia/DNyjLBvDJeGazI=
----
-
 # skill-forge
 
 **Build Agent Skills that actually fire — then score them before you ship.**
@@ -51,7 +40,7 @@ Fix those, run it again, ship. That's the whole loop.
 ## Install
 
 ```bash
-git clone https://github.com/Gary2525-coder/skill-forge.git
+git clone https://github.com/<your-name>/skill-forge.git
 mkdir -p ~/.claude/skills && cp -r skill-forge ~/.claude/skills/
 ```
 
@@ -108,7 +97,7 @@ and almost nobody does it.
 ## Zero-install check
 
 ```bash
-curl -sO https://raw.githubusercontent.com/Gary2525-coder/skill-forge/main/scripts/skillforge.py
+curl -sO https://raw.githubusercontent.com/<your-name>/skill-forge/main/scripts/skillforge.py
 python skillforge.py score ./my-skill
 ```
 
